@@ -11,8 +11,8 @@ const hs = require('./data.json')
 //get
 app.get('/get', (req, res) => {
     fs.readFile('data.json', (err, data) => {
-        const hsd = JSON.parse(data)
-        res.send(hsd)
+        const hosp = JSON.parse(data)
+        res.send(hosp)
     })
 
 });
