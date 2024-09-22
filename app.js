@@ -29,7 +29,7 @@ app.post('/post', (req, res) => {
     fs.writeFile("data.json", JSON.stringify(hs), () => {
 
         console.log("File has been updated");
-        res.send("Data added successfully");
+        res.send(" Added successfully");
     });
 });
 
@@ -44,10 +44,10 @@ app.put('/put/:id', (req, res) => {
         fs.writeFile("data.json", JSON.stringify(hs), () => {
 
             console.log("File has been updated");
-            res.send("Data updated successfully");
+            res.send(" updated successfully");
         });
     } else {
-        res.status(404).send("Item not found");
+        res.status(404).send("error");
     }
 });
 
@@ -60,10 +60,10 @@ app.delete('/delete/:id', (req, res) => {
         fs.writeFile("data.json", JSON.stringify(hs), () => {
 
             console.log("File has been updated");
-            res.send("Data deleted successfully");
+            res.send(" deleted successfully");
         });
     } else {
-        res.status(404).send("Item not found");
+        res.status(404).send("error");
     }
 });
 
